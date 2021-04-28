@@ -76,7 +76,6 @@ void Family::setName(int num, string name) {
 	*(p+num) = re;
 };
 
-
 void Family::show() {
 	for (int i = 0 ;i < size;i++) {
 		cout << (p+i)->getName() << "\t";
@@ -91,4 +90,49 @@ void four_3_m() {
 	simpson->setName(2, "Bart simpson");
 	simpson->show();
 	delete simpson;
+}
+
+class Histogram {
+	string s;
+	int size;
+	int count[26];
+public :
+	Histogram() { s = ""; size = 0; }
+	Histogram(string s) { this->s = s; size = 0;}
+	void put(string s) { this->s.append(s); }
+	void putc(char c) { char buf[] = { c,'\0' }; this->s.append(buf); }
+	void print();
+};
+
+void Histogram::print() {
+	for (int i = 0; i<26; i++)
+		count[i] = 0; 
+
+	cout << s << endl << endl;
+
+	for (int i = 0; i<s.length(); i++) {
+		if (isalpha(s[i])) { // 알파벳이면 대문자 1, 소문자 2. 아니면 0
+			char c = tolower(s[i]); //tolower 대문자를 소문자로
+			count[c - 'a']++;
+		}
+	}
+
+	for (int i = 0; i<26; i++) size += count[i]; // 전체 알파벳 수 더하기
+	cout << "총 알파벳 수 " << size << endl;
+	cout << endl;
+
+	for (int i = 0; i<26; i++) {
+		cout << char('a' + i) << " (" <<count[i] << ")" << '\t' << ": ";
+		for (int j = 0; j<count[i]; j++)
+			cout << '*';
+		cout << endl;
+	}
+
+}
+void four_4_m() {
+	Histogram elvisHisto("Wise men say, only fools rush in But I can't help, \n");
+	elvisHisto.put("falling in love with you");
+	elvisHisto.putc('-');
+	elvisHisto.put("Elvis Presley");
+	elvisHisto.print();
 }
