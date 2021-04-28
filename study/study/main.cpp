@@ -2,6 +2,6 @@
 #include "header.h"
 
 int main() {
-	four_2_m();
+	four_3_m();
 
 }

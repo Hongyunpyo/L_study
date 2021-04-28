@@ -50,3 +50,45 @@ void four_2_m() {
 	
 
 }
+
+class Person {
+	string name;
+public :
+	Person() { this->name.clear(); };
+	Person(string name) { this->name = name; }
+	string getName() { return name; }
+};
+
+class Family{
+	Person *p;
+	string name;
+	int size;
+public :
+	Family() {};
+	Family(string name, int size) { this->name = name; this->size = size; p = new Person[size]; };
+	void setName(int num, string name);
+	void show();
+	~Family() {};
+};
+
+void Family::setName(int num, string name) {
+	Person re(name);
+	*(p+num) = re;
+};
+
+
+void Family::show() {
+	for (int i = 0 ;i < size;i++) {
+		cout << (p+i)->getName() << "\t";
+	}
+	cout << endl;
+};
+
+void four_3_m() {
+	Family *simpson = new Family("Simpson", 3);
+	simpson->setName(0, "Mr.simpson");
+	simpson->setName(1, "Mrs.simpson");
+	simpson->setName(2, "Bart simpson");
+	simpson->show();
+	delete simpson;
+}
