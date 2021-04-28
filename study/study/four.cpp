@@ -26,3 +26,27 @@ void four_1_m() {
 		(p + i)->show();
 	}
 }
+
+void four_2_m() {
+	string s,r;
+	
+	cout << "아래에 한줄을 입력하세요 (exit 종료)" << endl;
+	
+	while (1) {
+		s.clear();
+		r.clear();
+		cout << "<<";
+		getline(cin, s, '\n');
+
+		if (s == "exit") break;
+
+
+		for (int i = s.length();i > 0;i--) {
+			r.append(s,i-1,1);
+		}
+
+		cout << "결과: " << r << endl;
+	}
+	
+
+}
