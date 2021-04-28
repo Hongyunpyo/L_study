@@ -5,9 +5,14 @@ class Random {
 	int num;
 
 	public:
+		Random();
 		int next();
 		int nextInRange(int x, int y);
 };
+
+Random::Random() {
+	srand((unsigned)time(0)); // 임의의 seed를 설정하여 할 때마다 다른 랜덤 수가 나오게 한다.
+}
 
 int Random::next() {
 	num = rand();
@@ -23,7 +28,7 @@ int Random::nextInRange(int x, int y) {
 
 void three_1_m() {
 	Random r;
-	srand((unsigned)time(0));
+	
 	cout << "0 에서" << RAND_MAX << "까지의 랜덤 정수 10개" << endl;
 
 	for (int i = 0;i < 10;i++) {
