@@ -19,3 +19,42 @@ void five_1_m() {
 	else
 		cout << "큰수는 : " << num3 << endl;
 }
+
+class MyIntStack {
+	int p[10];
+	int tos;
+
+public:
+	MyIntStack() { tos = 0; }
+	bool push(int n);
+	bool pop(int &n);
+};
+bool MyIntStack::push(int n) {
+	if (tos == 10)
+		return false;
+	p[tos] = n;
+	tos++;
+	return true;
+}
+
+bool MyIntStack::pop(int& n) {
+	if (tos == 0)
+		return false;
+	tos--;
+	n = p[tos];
+	return true;
+}
+
+void five_2_m() {
+	MyIntStack a;
+	for (int i = 0;i < 11;i++) {
+		if (a.push(i)) cout << i << ' ';
+		else cout << endl << i + 1 << " 번째 stack full" << endl;
+	}
+	int n;
+	for (int i = 0; i < 11; i++) {
+		if (a.pop(n)) cout << n << ' ';
+		else cout << endl << i + 1 << " 번째 stack empty";
+	}
+	cout << endl;
+}
