@@ -16,6 +16,7 @@ void four_4_m();  //Histogram 클래스를 만들어 대문자를 소문자로 만들어 알파벳 각
 void five_1_m();  //두개의 값을 입력받아 bigger()함수 호출후 큰값 출력
 void five_2_m();  //스택 클래스 구현
 void five_3_m();  //참조 함수 구현
+void six_1_m();   //함수 중복 선언,디폴트 매개변수 실습
 
 
 
