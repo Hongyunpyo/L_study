@@ -29,6 +29,7 @@ public:
 	bool push(int n);
 	bool pop(int &n);
 };
+
 bool MyIntStack::push(int n) {
 	if (tos == 10)
 		return false;
@@ -57,4 +58,23 @@ void five_2_m() {
 		else cout << endl << i + 1 << " 번째 stack empty";
 	}
 	cout << endl;
+}
+
+class Accumulator {
+	int value;
+public:
+	Accumulator(int value) { this->value = value; }
+	Accumulator& add(int n);
+	int get() { return value; }
+};
+
+Accumulator& Accumulator::add(int n) {
+	value += n;
+	return *this;
+};
+
+void five_3_m() {
+	Accumulator acc(10);
+	acc.add(5).add(6).add(7); // acc의 value 멤버가 28이 된다.
+	cout << acc.get() << endl; // 28 출력
 }
