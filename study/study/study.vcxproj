@@ -118,6 +118,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="five.cpp" />
     <ClCompile Include="four.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="three.cpp" />
