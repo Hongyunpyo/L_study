@@ -9,14 +9,23 @@ public :
 	double getArea() { return 3.14*radius*radius; }
 };
 
-class NameCircle : public Circle {
+class NamedCircle : public Circle {
 	string name;
-public :
-	NameCircle(int radius, string name = "") { setRadius(radius), this->name = name; }
-	void show() { cout << "반지름이 " << getRadius() << "인 " << name << endl; }
+public:
+	NamedCircle(int radius, string name);
+	void show();
 };
 
+NamedCircle::NamedCircle(int radius, string name)
+	: Circle(radius) {
+	this->name = name;
+}
+
+void NamedCircle::show() {
+	cout << "반지름이 " << getRadius() << "인 " << name << endl;
+}
+
 void eight_1_m() {
-	NameCircle waffle(3, "waffle");
+	NamedCircle waffle(3, "waffle");
 	waffle.show();
 }
