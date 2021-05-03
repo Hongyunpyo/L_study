@@ -93,7 +93,7 @@ class MyQueue :public BaseArray {
 	int head, tail;
 	int size;
 public :
-	MyQueue(int num) :BaseArray(num) { head = 0, tail = 0, size = 0; };
+	MyQueue(int num) :BaseArray(num) { head = 0, tail = -1, size = 0; };
 	int capacity();
 	int length();
 	void enqueue(int n);
