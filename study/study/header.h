@@ -19,6 +19,7 @@ void five_3_m();  //참조 함수 구현
 void six_1_m();   //함수 중복 선언,디폴트 매개변수 실습
 void six_2_m();   //static 함수 실습
 void seven_1_m(); //프렌트,연산자 중복 함수 실습
+void seven_2_m(); //프렌트,연산자 중복 함수 실습2
 
 
 

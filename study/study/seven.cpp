@@ -32,3 +32,52 @@ void seven_1_m() {
 	a.show();
 	b.show();
 }
+
+class Matrix {
+	int num[4];
+public:
+	Matrix() { for (int i = 0; i<4; i++) num[i] = 0; }
+	Matrix(int a1, int a2, int b1, int b2) {
+		num[0] = a1;
+		num[1] = a2;
+		num[2] = b1;
+		num[3] = b2;
+	}
+	void show(){cout << "Matrix = { ";for (int i = 0; i < 4; i++) cout << num[i] << ' ';cout << "}" << endl;}
+	friend Matrix operator +(Matrix &op1, Matrix &op2);
+	friend Matrix operator +=(Matrix &op1, Matrix &op2);
+	friend bool operator ==(Matrix &op1, Matrix &op2);
+};
+
+Matrix operator +(Matrix &op1, Matrix &op2) {
+	Matrix tmp;
+	for (int i = 0;i < 4;i++) {
+		tmp.num[i] = op1.num[i] + op2.num[i];
+	}
+	return tmp;
+};
+
+Matrix operator +=(Matrix &op1, Matrix &op2) {
+	
+	for (int i = 0;i < 4;i++) {
+		op1.num[i] = op1.num[i] + op2.num[i];
+	}
+	return op1;
+};
+
+bool operator ==(Matrix &op1, Matrix &op2) {
+
+	for (int i = 0;i < 4;i++) {
+		if (op1.num[i] != op2.num[i]) return false;
+	}
+	return true;
+};
+
+void seven_2_m() {
+	Matrix a(1, 2, 3, 4), b(2, 3, 4, 5), c;
+	c = a + b;
+	a += b;
+	a.show(); 	b.show(); c.show();
+	if (a == c)
+		cout << "a and c are the same" << endl;
+}
