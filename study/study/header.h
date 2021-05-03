@@ -20,8 +20,8 @@ void six_1_m();   //함수 중복 선언,디폴트 매개변수 실습
 void six_2_m();   //static 함수 실습
 void seven_1_m(); //프렌트,연산자 중복 함수 실습
 void seven_2_m(); //프렌트,연산자 중복 함수 실습2
-void eight_1_m(); //상속 클래스 생성 실습
-
+void eight_1_m(); //상속 클래스 생성 실습1
+void eight_2_m(); //상속 클래스 생성 실습2
 
 
 
