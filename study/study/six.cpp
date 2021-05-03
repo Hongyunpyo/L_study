@@ -50,3 +50,4 @@ void six_2_m() {
 	for (int i = 0; i<5; i++) cout << x[i] << ' ';
 	cout << endl;
 }
+
