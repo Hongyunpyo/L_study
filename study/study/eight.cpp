@@ -141,3 +141,7 @@ void eight_3_m() {
 	}
 	cout << endl << "큐의 현재 크기 : " << mQ.length() << endl;
 }
+
+void test() {
+	
+}

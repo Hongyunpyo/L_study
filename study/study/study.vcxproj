@@ -122,6 +122,7 @@
     <ClCompile Include="five.cpp" />
     <ClCompile Include="four.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="nine.cpp" />
     <ClCompile Include="seven.cpp" />
     <ClCompile Include="six.cpp" />
     <ClCompile Include="three.cpp" />

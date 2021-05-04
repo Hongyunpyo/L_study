@@ -5,6 +5,7 @@
 
 using namespace std;
 
+void test();
 void two_1();     //6,문자열 2개 입력받고 같다, 다르다 를 출력
 void two_2();     //11.수정하여 실행
 void three_1_m(); // 3, ramdom클래스 실습
@@ -23,6 +24,7 @@ void seven_2_m(); //프렌트,연산자 중복 함수 실습2
 void eight_1_m(); //상속 클래스 생성 실습1
 void eight_2_m(); //상속 클래스 생성 실습2
 void eight_3_m(); //상속 클래스 큐 실습
+void nine_1_m();
 
 
 
