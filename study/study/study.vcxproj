@@ -125,6 +125,7 @@
     <ClCompile Include="nine.cpp" />
     <ClCompile Include="seven.cpp" />
     <ClCompile Include="six.cpp" />
+    <ClCompile Include="ten.cpp" />
     <ClCompile Include="three.cpp" />
     <ClCompile Include="two.cpp" />
   </ItemGroup>

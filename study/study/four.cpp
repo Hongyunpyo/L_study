@@ -110,7 +110,7 @@ void Histogram::print() {
 
 	cout << s << endl << endl;
 
-	for (int i = 0; i<s.length(); i++) {
+	for (int i = 0; i < s.length(); i++) {
 		if (isalpha(s[i])) { // 알파벳이면 대문자 1, 소문자 2. 아니면 0
 			char c = tolower(s[i]); //tolower 대문자를 소문자로
 			count[c - 'a']++;
