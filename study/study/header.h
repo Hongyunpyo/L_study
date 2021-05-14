@@ -2,7 +2,7 @@
 #include <string>
 #include <cstdlib>
 #include <ctime>
-
+#include <vector>
 using namespace std;
 
 void test();
@@ -26,6 +26,7 @@ void eight_2_m(); //상속 클래스 생성 실습2
 void eight_3_m(); //상속 클래스 큐 실습
 void nine_1_m();
 void ten_1_m();
+void ten_2_m();
 
 
 
